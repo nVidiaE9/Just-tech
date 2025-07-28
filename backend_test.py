@@ -12,6 +12,15 @@ from typing import Dict, Any
 
 class LuxuryPortfolioAPITester:
     def __init__(self, base_url="http://localhost:8001"):
+        # Read the public URL from frontend .env
+        try:
+            with open('/app/frontend/.env', 'r') as f:
+                for line in f:
+                    if line.startswith('REACT_APP_BACKEND_URL='):
+                        self.base_url = line.split('=', 1)[1].strip()
+                        break
+        except:
+            pass  # Use default if can't read .env
         self.base_url = base_url
         self.tests_run = 0
         self.tests_passed = 0
