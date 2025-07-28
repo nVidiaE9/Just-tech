@@ -348,7 +348,7 @@ const ContactSection = ({ soundEnabled }) => {
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-silver">Response Time</span>
-                  <span className="text-gold">< 24 hours</span>
+                  <span className="text-gold">&lt; 24 hours</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-silver">Project Booking</span>
